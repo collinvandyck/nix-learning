@@ -10,5 +10,9 @@ in
         black
         flake8
       ];
+      shellHook = ''
+      git status
+      alias ll='ls -lh'
+      '';
     };
   }

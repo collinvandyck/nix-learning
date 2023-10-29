@@ -18,8 +18,10 @@ stdenv.mkDerivation {
 
   buildInputs = [ imlib2 xorg.libX11 ];
   installPhase = ''
+  runHook preInstall
   mkdir -p $out/bin
   cp icat $out/bin
+  runHook postInstall
   '';
 }
 

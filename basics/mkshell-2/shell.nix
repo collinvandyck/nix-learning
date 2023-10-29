@@ -9,4 +9,5 @@ pkgs.mkShell {
     neovim
     nodejs
   ];
+  GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
 }

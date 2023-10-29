@@ -10,4 +10,7 @@ pkgs.mkShell {
     nodejs
   ];
   GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
+  shellHook = ''
+    git status
+  '';
 }

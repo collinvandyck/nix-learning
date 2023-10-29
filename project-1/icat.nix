@@ -3,6 +3,7 @@
 , stdenv 
 , fetchFromGitHub
 , imlib2
+, xorg
 }:
 
 stdenv.mkDerivation {
@@ -15,6 +16,10 @@ stdenv.mkDerivation {
     # nix-prefetch-url --unpack https://github.com/atextor/icat/archive/refs/tags/v0.5.tar.gz --type sha256
   };
 
-  buildInputs = [ imlib2 ];
+  buildInputs = [ imlib2 xorg.libX11 ];
+  installPhase = ''
+  mkdir -p $out/bin
+  cp icat $out/bin
+  '';
 }
 

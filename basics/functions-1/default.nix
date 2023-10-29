@@ -2,9 +2,11 @@ let
   ident = x: x+1;
   add = x: y: x + y;
   mul = x: y: x * y;
+  att_add = { a, b }: a + b;
 in
   {
     x = ident(5);
     x2 = add(5)(4);
     x3 = mul(5)(4);
+    x4 = att_add({ a=1; b=2; });
   }

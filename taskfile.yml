@@ -5,9 +5,9 @@ tasks:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - nix-instantiate --eval --strict
-    silent: true
+    silent: false
   pkg:
     dir: '{{.USER_WORKING_DIR}}'
     cmds:
       - nix-instantiate --eval --strict --arg pkgs 'import <nixpkgs> {}'
-    silent: true
+    silent: false

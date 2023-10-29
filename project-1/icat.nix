@@ -1,7 +1,9 @@
 # icat.nix
 { lib
 , stdenv 
-, fetchFromGitHub }:
+, fetchFromGitHub
+, imlib2
+}:
 
 stdenv.mkDerivation {
   name = "icat";

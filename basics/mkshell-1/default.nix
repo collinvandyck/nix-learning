@@ -5,8 +5,8 @@ let
   message = "hello world";
 in
 pkgs.mkShell {
-  buildInputs = with pkgs; [ cowsay ];
+  buildInputs = with pkgs; [ cowsay lolcat ];
   shellHook = ''
-    cowsay ${message}
+    cowsay ${message} | lolcat
   '';
 }

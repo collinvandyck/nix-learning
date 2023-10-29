@@ -11,3 +11,8 @@ tasks:
     cmds:
       - nix-instantiate --eval --strict --arg pkgs 'import <nixpkgs> {}'
     silent: false
+  lib:
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - nix-instantiate --eval --strict --arg lib '(import <nixpkgs> {}).lib'
+    silent: false
